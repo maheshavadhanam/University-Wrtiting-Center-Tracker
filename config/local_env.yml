@@ -1,0 +1,7 @@
+if Rails.env.development?
+  HOST_URL: "localhost:3000/"
+end
+
+if Rails.env.production?
+  HOST_URL: "https://radiant-scrubland-22682.herokuapp.com/"
+end

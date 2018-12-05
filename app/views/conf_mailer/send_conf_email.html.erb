@@ -1,0 +1,24 @@
+<html>
+
+   <head>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+
+   <body>
+      <h4>Hi, <%= @user.first_name.titleize %></h4>
+
+      <p>
+         You have successfully signed up for University writing tracker
+      </p>
+
+      <p>
+         To activate your account, just follow this
+         <%= link_to "Link", @url %>.
+      </p>
+      <p>Thanks for joining and have a great day!</p>
+      <h6>Please Note: This link will expire within 1 or 2 days</h6>
+      <p>Regards,<br>University Tracker Team</p>
+
+      <small>** Please do not reply to this email **</small>
+   </body>
+</html>

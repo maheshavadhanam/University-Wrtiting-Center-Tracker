@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6" style="margin-top: 50px;">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          <h3>Create Task </h3>
+        </div>
+        <div class="panel-body">
+          <%= bootstrap_form_for(:task, :url => user_tasks_path(@user)) do |f| %>
+             <%= f.text_field :title, label: 'Title:', required: true%>
+             <%= f.date_select :target_date, label: 'Target Date: '%>
+             <%= f.hidden_field :create_date, value: Time.now %>
+             <!--Mahesh starts-->
+             <%= f.select :measure, ['Pages','Words','Chapters','Custom'] , {label: "Measurement"}%>
+             <%= f.text_field :custom_measure, {label: "Custom Measure: "}%>
+             <!--Mahesh ends-->
+             <%= f.text_field :target_value, label: "Target Value: ",required: true%>
+             <%= f.form_group :email, label: {text: "Email: "} do %>
+              <%= f.radio_button :email, true, label: "Yes", checked: true %>
+              <%= f.radio_button :email, false, label: "No" %>
+            <% end %>
+            <%= f.text_area :desc , label: "Description: "%>
+            <div class="text-center col-md-6 col-sm-12">
+              <%= f.submit :Create , {:class=>'btn btn-success'}%>
+            </div>
+            <div class="text-center col-md-6 col-sm-12">
+              <%= link_to "Back" , users_path , {:class=> 'btn btn-info'}%>
+            </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>t

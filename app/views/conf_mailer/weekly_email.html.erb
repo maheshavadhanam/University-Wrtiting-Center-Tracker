@@ -1,0 +1,35 @@
+<html>
+
+   <head>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+
+   <body>
+      <h4>Hi, <%= @user.first_name.titleize %></h4>
+
+      <p>This is a weekly email regarding your pending tasks on <strong>University Tracker<strong></p>
+      <table class="table table-striped">
+        <tr>
+          <th>Task Name</th>
+          <th>Deadline Passed?</th>
+          <th>Time Remaining</th>
+          <th>Progress</th>
+        </tr>
+        <% @tasks.each do |task|%>
+        <%if task.email%>
+          <tr>
+            <td><%= task.title %></td>
+            <td><%= if (task.target_date - Time.now) < 0; "Yes";else;"No";end%></td>
+            <td><%= if (task.target_date - Time.now) < 0; 0; else; ((task.target_date - Time.now)/86400).ceil ;end %> Days</td>
+            <td><%= (task.current_value*100)/task.target_value%>% Completed</td>
+          </tr>
+          <%end%>
+        <%end%>
+      </table>
+      <p>Regards,<br>University Tracker Team</p>
+
+      <small>** Please do not reply to this email. This email is for informational purposes only **</small>
+   </body>
+</html>

@@ -1,0 +1,62 @@
+<div class="navbar navbar-default">
+    <div class="header navbar top-bar fixed" id="myHeader">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">University Writing tracker</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><%=link_to "Logout", logout_path%></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+
+    <div class=" panel panel-default" style="margin-top:15%;">
+        <div style="margin-left:170px; margin-top:20px;">
+            <%=image_tag("male.png", class:"img-responsive") %>
+        </div>
+        <div class="text-center panel-body">
+            <div class="row">
+                <h2> <%= @user.first_name.titleize%> <%= @user.last_name.titleize%> </h2>
+            </div>
+            <span>
+                Total tasks: <%= @user_tasks.size %>
+            </span>
+            <div class="row">
+                <a href="#" class="btn btn-danger" style="margin-top:6px;">Settings</a>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default" style="margin-top:3%;">
+        <div class="panel-footer">
+            <h4> Quote of the Day</h4>
+        </div>
+        <div class="panel-body text-center">
+            <blockquote class="blockquote">
+                <p class="mb-0"><%= @quote.quote%></p>
+                <footer class="blockquote-footer"><%= @quote.author%></footer>
+            </blockquote>
+        </div>
+    </div>
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-6" style="margin-top:3%;">
+<div class="ali" style="margin-top:3%;">
+<%= link_to " Task" , new_user_task_path(@user), {:id=>"new_task", :class=>"btn btn-success glyphicon glyphicon-plus "} %>
+</div>
+<div style="margin-top:3%;" class="cc">TO DO : </div>
+  <% @user_tasks.each do |task|%>
+    <div class="row" style="margin-top:8px;">
+          <div class="well">
+            <%= link_to task.title , user_task_path(@user,task), {:id=>"task",:method=> "get"}%>
+            <%= link_to "Delete", user_task_path(@user,task) , {:class=> "btn btn-danger", :method=> :delete, :style=> 'float:right;', :data => {:confirm => "Are you sure"}}%>
+            <% @percent = (task.current_value*100)/task.target_value%>
+            <span class="btn btn-info" style="float:right;margin-right:10px;"> <%= if @percent>100; 100; else; @percent; end;%>% Completed</span>
+            <% if (task.target_date - Time.now) < 0%>
+            <span class='btn btn-danger' style='float:right;margin-right:10px;'> Deadline Passed </span>
+            <%end%>
+          </div>
+    </div>
+  <%end%>
+</div>

@@ -1,0 +1,591 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+<<<<<<< HEAD
+      "/home/amith/Documents/writing-tracker/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+=======
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+<<<<<<< HEAD
+        null,
+        null,
+        1,
+        0,
+        0,
+=======
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        null,
+        null,
+        1,
+<<<<<<< HEAD
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        1,
+=======
+        1,
+        1,
+        1,
+        null,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        null,
+        1,
+        null,
+<<<<<<< HEAD
+        null
+      ],
+      "/home/amith/Documents/writing-tracker/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/amith/Documents/writing-tracker/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+=======
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        null,
+<<<<<<< HEAD
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        1,
+=======
+        0,
+        null,
+        0,
+        null,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        null,
+        null,
+        1,
+        null,
+<<<<<<< HEAD
+=======
+        2,
+        0,
+        null,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+<<<<<<< HEAD
+        1,
+        1,
+=======
+        0,
+        0,
+        null,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        null,
+        null,
+        null
+      ],
+<<<<<<< HEAD
+      "/home/amith/Documents/writing-tracker/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/home/amith/Documents/writing-tracker/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/amith/Documents/writing-tracker/app/helpers/tasks_helper.rb": [
+        1,
+        null
+      ],
+      "/home/amith/Documents/writing-tracker/app/helpers/users_helper.rb": [
+=======
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/helpers/tasks_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/helpers/users_helper.rb": [
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+<<<<<<< HEAD
+      "/home/amith/Documents/writing-tracker/app/mailers/conf_mailer.rb": [
+        1,
+        1,
+=======
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+<<<<<<< HEAD
+=======
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+<<<<<<< HEAD
+        0,
+        null,
+        null
+      ],
+      "/home/amith/Documents/writing-tracker/app/mailers/application_mailer.rb": [
+        1,
+=======
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/models/application_record.rb": [
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        1,
+        1,
+        null
+      ],
+<<<<<<< HEAD
+      "/home/amith/Documents/writing-tracker/app/controllers/tasks_controller.rb": [
+        0,
+        null,
+        0,
+        null,
+=======
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/mailers/conf_mailer.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        null,
+<<<<<<< HEAD
+        0,
+        0,
+=======
+        null
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/mailers/application_mailer.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/models/timer.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/models/quote.rb": [
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
+=======
+        0
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/models/task.rb": [
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+=======
+        0,
+        0
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/jobs/weekly_emails.rb": [
+        0,
+        0,
+        0,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
+        null,
+        0,
+=======
+        0
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/controllers/tasks_controller.rb": [
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
+        0,
+        0,
+        0,
+        null,
+=======
+        null,
+        0,
+        0,
+        0,
+        0,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
+=======
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
+        0
+      ],
+      "/home/amith/Documents/writing-tracker/app/models/quote.rb": [
+=======
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
+        0
+      ],
+      "/home/amith/Documents/writing-tracker/app/models/task.rb": [
+        0,
+=======
+        0,
+        null,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0,
+        null,
+<<<<<<< HEAD
+        0
+      ],
+      "/home/amith/Documents/writing-tracker/app/jobs/weekly_emails.rb": [
+=======
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
+=======
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
+        0
+      ],
+      "/home/amith/Documents/writing-tracker/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/home/amith/Documents/writing-tracker/app/channels/application_cable/channel.rb": [
+=======
+        0,
+        0
+      ],
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/channels/application_cable/connection.rb": [
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0
+      ],
+<<<<<<< HEAD
+      "/home/amith/Documents/writing-tracker/app/channels/application_cable/connection.rb": [
+=======
+      "/Users/sgkumar/Desktop/SE Project/CSCE606-University-Writing-Centre/app/channels/application_cable/channel.rb": [
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+<<<<<<< HEAD
+    "timestamp": 1541697368
+=======
+    "timestamp": 1542671882
+>>>>>>> d09c330b272cd296866aa38012d657b3dcfcdac7
+  }
+}

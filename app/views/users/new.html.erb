@@ -1,0 +1,37 @@
+<div class="header navbar top-bar fixed" id="myHeader">
+<div class="navbar-header">
+<a class="navbar-brand" href="#">University Writing tracker</a>
+</div>
+<div class="collapse navbar-collapse">
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to "About", root_path()%></li>
+</ul>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6" style="margin-top: 100px">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          <h3>Signup </h3>
+        </div>
+        <div class="panel-body">
+          <%= bootstrap_form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+             <%= f.text_field :first_name, label: 'First Name:'%>
+             <%= f.text_field :last_name, label: 'Last Name: '%>
+             <%= f.email_field :email, label: 'Email: '%>
+             <%= f.password_field :password, label: 'Password'%>
+             <%= f.password_field :password_confirmation, label: 'Confirm Password'%>
+             <div class="row text-center">
+               <div class="col-sm-6">
+                 <%= f.submit :Signup , {:class=>'btn btn-info'}%>
+               </div>
+               <div class="col-sm-6">
+                 <%= link_to "Already have an account?",login_path, {:class =>'btn btn-info'}%>
+               </div>
+             </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>

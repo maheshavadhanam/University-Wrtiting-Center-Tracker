@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @task.title%></title>
+  </head>
+  <body>
+<div class="navbar">
+<div class="navbar-header">
+<a class="navbar-brand" href="#">University Writing tracker</a>
+</div>
+<div class="collapse navbar-collapse">
+</div></div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2><%= @task.title%></h2>
+      </div></div>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <%= label :task, :create_date, "Create Date: "%>
+        <span><%=  @task.create_date.strftime("%d - %m - %Y")%></span>
+      </div>
+      <div class="col-md-4 text-center">
+        <%= label :task, :create_date, "Time Remaining: "%>
+        <span><%= if (@task.target_date - Time.now) < 0; 0; else; ((@task.target_date - Time.now)/86400).ceil ;end  %> Days</span>
+      </div>
+      <div class="col-md-4 text-center">
+        <%= label :task, :target_date, "Target Date: "%>
+        <span><%=  @task.target_date.strftime("%d - %m - %Y")%></span>
+      </div></div>
+    <br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-md-6 text-center">
+          <div class="progress2" data-percentage="<%=  if @percent>100; 100; else; @percent.to_i; end; %>">
+            <span class="progress2-left"><span class="progress2-bar"></span></span>
+            <span class="progress2-right"><span class="progress2-bar"></span></span>
+            <div class="progress2-value">
+          <div>
+            <%=  if @percent>100; 100; else; @percent; end; %>%<br>
+            <span><strong><%= @task.measure%></strong> Completed</span>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-6 text-center" style="">
+            <div class="timer" style="visibility: hidden;">
+
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-12 text-center">
+                <div class="text-center">
+                  <div id="prog-hour" class="progress" data-percentage="0">
+                    <span class="progress-left"><span class="progress-bar"></span></span>
+                    <span class="progress-right"><span class="progress-bar"></span></span>
+                    <div class="progress-value">
+                  <div>
+                    <div id="hours">0</div> <span>Hours</span>
+                  </div>
+                </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div id="prog-min" class="progress" data-percentage="0">
+                  <span class="progress-left"><span class="progress-bar"></span></span>
+                  <span class="progress-right"><span class="progress-bar"></span></span>
+                  <div class="progress-value">
+                <div>
+                  <div id="minutes">0</div> <span>Minutes</span>
+                </div>
+              </div>
+              </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div id="prog-sec" class="progress" data-percentage="0">
+                  <span class="progress-left"><span class="progress-bar"></span></span>
+                  <span class="progress-right"><span class="progress-bar"></span></span>
+                  <div class="progress-value">
+                <div>
+                  <div id="seconds">0</div> <span> Seconds</span>
+                </div>
+              </div>
+              </div>
+              </div>
+          </div>
+          <div class="col-sm-3 text-center">
+            <a href="#" class="btn btn-success" onClick="$('.timer').countimer('start');" data-toggle="modal" data-target="#myTimer">Start</a>
+          </div>
+          <div class="col-sm-3 text-center">
+            <a class="btn btn-warning" onClick="$('.timer').countimer('stop');"><span class="	glyphicon glyphicon-pause"></span>Pause</a>
+          </div>
+          <div class="col-sm-3 text-center">
+             <button class="btn btn-success" onClick="$('.timer').countimer('resume');"><span class="glyphicon glyphicon-play"></span>Resume</button>
+          </div>
+          <div class="col-sm-3 text-center">
+            <button type="button" id="timer_stop" class="btn btn-danger" onClick="$('.timer').countimer('stop');" data-dismiss="modal"> <span class="glyphicon glyphicon-stop"></span>Stop</button>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="container">
+          <div class="text-center">
+            <label>View Progress</label>
+          </div>
+          <%= line_chart @times, {curve: true, ytitle: "Minutes", xtitle: "Date"}%>
+        </div>
+      </div>
+      <br><br>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="float-center text-center" style="margin-top:7%">
+                    <%= form_tag update_user_task_path(@user,@task), method: "post" do%>
+                    <div class="row">
+                      <div class="col-md-2 text-center">
+                        <%= label :task, :current_value, "Update Progress: "%>
+                      </div>
+                      <div class="col-md-4 text-center">
+                        <%= text_field :task, :current_value, value: @task.current_value%>
+                      </div>
+                      <div class="col-md-6  text-center">
+                        <%= text_field :task, :hour, {value: 0, size: 2}%>
+                        <small>Hours</small>:
+                        <%= text_field :task, :min, {value: 0, size: 2}%>
+                        <small>Minutes</small>:
+                        <%= text_field :task, :sec, {value: 0, size: 2}%>
+                        <small>Seconds</small>
+                      </div>
+                    </div>
+                    <div class="row col-md-12 text-center" style="padding-top:5%;">
+                      <%= submit_tag "Update" , {:class=> 'btn btn-info'}%>
+                    </div>
+                    <%end%>
+          </div>
+        </div>
+
+      </div>
+      <hr>
+      <br><br><br><br><br>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <%= link_to "Back" , users_path , {:class=> 'btn btn-info'}%>
+        </div>
+        <div class="col-md-4 text-center">
+          <%= link_to "Edit", edit_user_task_path(@user,@task) , {:class=>'btn btn-warning'}%>
+        </div>
+        <div class="col-md-4 text-center">
+          <%= link_to "Delete", user_task_path(@user,@task), {:class=>'btn btn-danger', :method=> :delete, :data => {:confirm => "Are you sure"} }%>
+        </div>
+      </div></div>
+  </body>
+</html>

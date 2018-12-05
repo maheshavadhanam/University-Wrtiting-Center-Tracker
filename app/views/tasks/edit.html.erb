@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6" style="margin-top: 50px;">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          <h3>Edit Task </h3>
+        </div>
+        <div class="panel-body">
+          <%= bootstrap_form_for(:task, {:url => user_task_path(@user),:method=> :put}) do |f| %>
+             <%= f.text_field :title, label: 'Title:', required: true%>
+             <%= f.date_select :target_date, label: 'Target Date: '%>
+             <%= f.hidden_field :create_date, value: Time.now %>
+             <!--Mahesh starts -->
+             <%= f.select :measure, ['Pages','Words','Chapters','Custom'] , {label: "Measurement", selected: (!@task.measure.in? ['Pages','Words','Chapters'])? "Custom": @task.measure }%>
+             <div class="form-group">
+             <label for="task_custom_measure">Custom Measure: </label>
+             <input class="form-control" type="text" name="task[custom_measure]" id="task_custom_measure" value="<%= (!@task.measure.in? ['Pages','Words','Chapters'])? @task.measure : ""%>">
+             </div>
+             <!--Mahesh ends -->
+             <%= f.text_field :target_value, label: "Target Value: ",required: true%>
+             <%= f.form_group :email, label: {text: "Email: "} do %>
+              <%= f.radio_button :email, true, label: "Yes", checked: true %>
+              <%= f.radio_button :email, false, label: "No" %>
+            <% end %>
+            <%= f.text_area :desc , label: "Description: "%>
+            <div class="text-center col-md-6"> <%= f.submit :Update , {:class=>'btn btn-warning'}%></div>
+            <div class="text-center col-md-6"><%= link_to "Back" , user_task_path(@user,@task) , {:class=> 'btn btn-info'}%></div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>t

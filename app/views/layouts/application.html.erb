@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WritingTracker</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="ez.countimer.js"></script>
+    <script type="application.js"></script>
+    <script type="counter.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'index'%>
+  </head>
+
+  <body>
+    <% flash.each do |key, value| %>
+      <div class="<%= flash_class(key) %> text-center alert-dismissible container">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <%= value %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
